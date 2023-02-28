@@ -1,47 +1,28 @@
 # About Dataset
 ## Context
-Term deposits are a major source of income for a bank. A term deposit is a cash investment held at a financial institution. Your money is invested for an agreed rate of interest over a fixed amount of time, or term. The bank has various outreach plans to sell term deposits to their customers such as email marketing, advertisements, telephonic marketing, and digital marketing.
+Due to rapid growth in field of cashless or digital transactions, credit cards are widely used in all around the world. Credit cards providers are issuing thousands of cards to their customers. Providers have to ensure all the credit card users should be genuine and real. Any mistake in issuing a card can be reason of financial crises. Due to rapid growth in cashless transaction, the chances of number of fraudulent transactions can also increasing. 
 
-Telephonic marketing campaigns still remain one of the most effective way to reach out to people. However, they require huge investment as large call centers are hired to actually execute these campaigns. Hence, it is crucial to identify the customers most likely to convert beforehand so that they can be specifically targeted via call.
+A Fraud transaction can be identified by analyzing various behaviors of credit card customers from previous transaction history datasets. If any deviation is noticed in spending behavior from available patterns, it is possibly of fraudulent transaction
 
-The data is related to direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe to a term deposit (variable y).
+The data is related to information about online payment fraud.
 
 ## Content
-The data is related to the direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed by the customer or not. The data folder contains two datasets:-
+The data contains historical information about fraudulent transactions which can be used to detect fraud in online payments.
 
-- train.csv: 45,211 rows and 17 columns ordered by date (from May 2008 to November 2010)
+- train.csv:
 
-- test.csv: 4521 rows and 17 columns with 10% of the examples (4521), randomly selected from train.csv
-
+- test.csv:
 ## Detailed Column Descriptions
-Bank client data:
-
-1 - age (numeric)
-2 - job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
-"blue-collar","self-employed","retired","technician","services")
-3 - marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
-4 - education (categorical: "unknown","secondary","primary","tertiary")
-5 - default: has credit in default? (binary: "yes","no")
-6 - balance: average yearly balance, in euros (numeric)
-7 - housing: has housing loan? (binary: "yes","no")
-8 - loan: has personal loan? (binary: "yes","no")
-
-\# related with the last contact of the current campaign:
-
-9 - contact: contact communication type (categorical: "unknown","telephone","cellular")
-10 - day: last contact day of the month (numeric)
-11 - month: last contact month of year (categorical: "jan", "feb", "mar", …, "nov", "dec")
-12 - duration: last contact duration, in seconds (numeric)
-
-\# other attributes:
-
-13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
-14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
-15 - previous: number of contacts performed before this campaign and for this client (numeric)
-16 - poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
+1 - step: represents a unit of time where 1 step equals 1 hour (numeric)
+2 - type: type of online transaction (categorical: "CASH_OUT", "PAYMENT", "CASH_IN", "TRANSFER", "DEBIT")
+3 - amount: the amount of the transaction (numeric)
+4 - oldbalanceOrig: balance before the transaction (numeric)
+5 - newbalanceOrig: balance after the transaction (numeric)
+6 - oldbalanceDest: initial balance of recipient before the transaction (numeric)
+7 - newbalanceDest: the new balance of recipient after the transaction (numeric)
 
 **Output variable (desired target):**
-17 - y - has the client subscribed a term deposit? (binary: "yes","no")
+8 - isFraud: fraud transaction (binary: "yes","no")
 
 Missing Attribute Values: None
 
@@ -57,9 +38,9 @@ Top-level directory layout
     ├── src                           # Source files 
     (alternatively `lib` or `app`)
         ├── notebook                  # Notebook files 
-            ├── data_processing.ipynb # Preprocessing data
-            ├── eda.ipynb             # EDA data
-            ├── modeling.ipynb        # Modeling/Evaluateing 
+            ├── BusinessUnderstanding.ipynb # BusinessBrainstom
+            ├── DataUnderstanding.ipynb     # EDA data
+            ├── 
     ├── tests                         # Automated tests (alternatively `spec` or `tests`)
     ├── LICENSE
     └── README.md
@@ -67,12 +48,12 @@ Top-level directory layout
 
 # Result:
 
-| ID | Model  | Accuracy | AUC
-| ------------- | ------------- | ------------- | ------------- |
-| 0  | Logistic Regression | 0.901349 | 0.64 |
-| 1  | SVM | 0.9079859 | 0.65 |
-| 2  | KNN | 0.917054 | 0.71 |
-| 3  | Decision Tree | 1.000000 | 1.00 |
-| 4  | Random Forest | 1.000000 | 1.00 |
-| 5  | Naive Bayes | 0.833002 | 0.68 |
+|  | Model  | F-beta | AUC | Avg Precision |
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 0  |  |  |  |
+| 1  |  |  |  |
+| 2  |  |  |  |
+| 3  |  |  |  |
+| 4  |  |  |  |
+| 5  |  |  |  |
 
