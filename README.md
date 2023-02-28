@@ -13,13 +13,21 @@ The data contains historical information about fraudulent transactions which can
 
 ## Detailed Column Descriptions
 1 - step: represents a unit of time where 1 step equals 1 hour (numeric)
+
 2 - type: type of online transaction (categorical: "CASH_OUT", "PAYMENT", "CASH_IN", "TRANSFER", "DEBIT")
+
 3 - amount: the amount of the transaction (numeric)
+
 4 - nameOrig: customer starting the transaction (string)
+
 5 - oldbalanceOrig: balance before the transaction (numeric)
+
 6 - newbalanceOrig: balance after the transaction (numeric)
+
 7 - nameDest: recipient of the transaction (string)
+
 8 - oldbalanceDest: initial balance of recipient before the transaction (numeric)
+
 9 - newbalanceDest: the new balance of recipient after the transaction (numeric)
 
 **Output variable (desired target):**
