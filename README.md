@@ -9,9 +9,8 @@ The data is related to information about online payment fraud.
 ## Content
 The data contains historical information about fraudulent transactions which can be used to detect fraud in online payments.
 
-- train.csv:
+- train.csv: 6,351,193 rows and 10 columns
 
-- test.csv:
 ## Detailed Column Descriptions
 1 - step: represents a unit of time where 1 step equals 1 hour (numeric)
 2 - type: type of online transaction (categorical: "CASH_OUT", "PAYMENT", "CASH_IN", "TRANSFER", "DEBIT")
