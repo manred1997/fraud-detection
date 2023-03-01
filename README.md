@@ -12,25 +12,21 @@ The data contains historical information about fraudulent transactions which can
 - train.csv: 6,351,193 rows and 10 columns
 
 ## Detailed Column Descriptions
-1 - step: represents a unit of time where 1 step equals 1 hour (numeric)
 
-2 - type: type of online transaction (categorical: "CASH_OUT", "PAYMENT", "CASH_IN", "TRANSFER", "DEBIT")
-
-3 - amount: the amount of the transaction (numeric)
-
-4 - nameOrig: customer starting the transaction (string)
-
-5 - oldbalanceOrig: balance before the transaction (numeric)
-
-6 - newbalanceOrig: balance after the transaction (numeric)
-
-7 - nameDest: recipient of the transaction (string)
-
-8 - oldbalanceDest: initial balance of recipient before the transaction (numeric)
-
-9 - newbalanceDest: the new balance of recipient after the transaction (numeric)
+| | Name | Type  | Desciption |
+| ------------- | ------------- | ------------- | ------------- | 
+| 1 | step | Integer | maps a unit of time in the real world. In this case, 1 step is 1 hour of time. |
+| 2 | type | String | CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER |
+| 3 | amount | Decimal | amount of the transaction in local currency. |
+| 4 | nameOrig | String | customer who started the transaction.|
+| 5 | oldbalanceOrig | Decimal | initial balance before the transaction. |
+| 6 | newbalanceOrig | Decimal | customer's balance after the transaction. |
+| 7 | nameDest | String | recipient ID of the transaction. |
+| 8 | oldbalanceDest | Decimal | initial recipient balance before the transaction. |
+| 9 | newbalanceDest | Decimal | recipient's balance after the transaction. |
 
 **Output variable (desired target):**
+
 10 - isFraud: fraud transaction (binary: "yes","no")
 
 Missing Attribute Values: None
