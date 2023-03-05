@@ -53,8 +53,19 @@ Top-level directory layout
 
 # Result:
 
+#### Confusion Matrix
+|  | Predict 0  | Predict 1 |
+| ------------- | ------------- | ------------- |
+| **Target 0** | 77221 | 62 |
+| **Target 1** | 25 | 677 |
+
+
+
+
+
+#### Metrics
 |  | Model  | F-beta | AUC | Avg Precision |
 | ------------- | ------------- | ------------- | ------------- | ------------- | 
 | 0  | XGBoost | 0.9396 | 0.9997 | 0.9376 |
-| 1  | LightGBM |  |  |  |
+| 1  | LightGBM | TODO | TODO | TODO |
 
