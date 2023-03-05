@@ -42,9 +42,13 @@ Top-level directory layout
     ├── scripts                       # Bash files (alternatively `script`)
     ├── src                           # Source files 
     (alternatively `lib` or `app`)
+        ├── helpers                   # Contain several functions
+        ├── loaders                   # Data transform/ Feature engineering / Custom Estimator
         ├── notebook                  # Notebook files 
             ├── BusinessUnderstanding.ipynb # BusinessBrainstom
             ├── DataUnderstanding.ipynb     # EDA data
+            ├── DataPreparation.ipynb       # Data Intergration
+            ├── Modeling.ipynb              # Modeling
             ├── 
     ├── tests                         # Automated tests (alternatively `spec` or `tests`)
     ├── LICENSE
